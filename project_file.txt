@@ -1,3 +1,4 @@
 1. Started assingment at around 8:05 by cloning repo
 2. Plan to spend next 60 mins reading and coming with an implementation plan for project
-3. 
+3. 9:39AM: Going back to read chapter on test-driven developement since I forgot the details
+4. 
