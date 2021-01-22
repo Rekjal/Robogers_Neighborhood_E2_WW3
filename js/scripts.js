@@ -1,35 +1,19 @@
-// var fullName;
-
-// let langSelector = function (area) {
-//   let chosenTrack;
-//   switch (area) {
-//     case 'Front-End':
-//       chosenTrack = "HTML/CSS/JavaScript";
-//       break;
-//     case 'Back-End':
-//       chosenTrack = "C#/Ruby/Python";
-//       break;
-//     case 'Full-Stack':
-//       chosenTrack = "HTML/CSS/JavaScript and C#/Ruby/Python";
-//       break;
-//     default:
-//       chosenTrack = "HTML/CSS/JavaScript";
-//       break;
-//   }
-//   return chosenTrack;
-// }
-
 $(document).ready(function () {  
   $("#entry").submit(function (e) {
-    let numeral = parseInt($("input#numeral").val());
+    let inputNum = parseInt($("input#numeral").val());
     $('input[type="number"], textarea').val('');  // to clear form of entered value after submit
     // alert(numeral);
     $("#story").show();
     e.preventDefault();
-    generateIntegers(numeral);
+    let generatedIntegerArray = [];
+    generatedIntegerArray = worker(inputNum);
   });
 });
 
-let generatedIntegers = function(enteredInt) {
-  let array;
+let worker = function(inputInteger) {
+  var generatedIntegerArray = [];
+  for (let i = 0; i <= inputInteger; i++) {
+     generatedIntegerArray.push(i);
+  }
+  return generatedIntegerArray;
 }

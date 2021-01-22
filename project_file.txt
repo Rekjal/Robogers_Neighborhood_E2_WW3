@@ -1,4 +1,5 @@
 1. Started assingment at around 8:05 by cloning repo
 2. Plan to spend next 60 mins reading and coming with an implementation plan for project
-3. 9:39AM: Going back to read chapter on test-driven developement since I forgot the details
-4. 
+3. 01/22 9:39AM: Going back to read chapter on test-driven developement since I forgot the details
+4. 01/22: 11:34AM: Still not clear about what to do with tests? Are they asking that I write JEST tests for each function?
+5. 
