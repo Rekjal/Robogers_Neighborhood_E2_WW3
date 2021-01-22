@@ -26,5 +26,10 @@ $(document).ready(function () {
     // alert(numeral);
     $("#story").show();
     e.preventDefault();
+    generateIntegers(numeral);
   });
 });
+
+let generatedIntegers = function(enteredInt) {
+  let array;
+}
