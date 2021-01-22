@@ -2,4 +2,5 @@
 2. Plan to spend next 60 mins reading and coming with an implementation plan for project
 3. 01/22 9:39AM: Going back to read chapter on test-driven developement since I forgot the details
 4. 01/22: 11:34AM: Still not clear about what to do with tests? Are they asking that I write JEST tests for each function?
-5. 
+5. 01/22: at 1:20PM sent mail to Lelani and Travis seeking explanation on what is expected for the test specs
+6. 
