@@ -8,9 +8,13 @@ $(document).ready(function () {
     let generatedIntegerArray = [];
     generatedIntegerArray = worker(inputNum);
     $("#story").show();
+    $(".inputNumber").text(inputNum.toString());
+    var k = -1;
     generatedIntegerArray.forEach(function (element) {
-      let num = "<li><strong>" + element + "</strong></li>";
+      k++;
+      let num = "<li>For input " + k + " <strong>" + element + "</strong></li>";
       $("ul#answer").append(num);
+
     });
 
   });
@@ -19,6 +23,8 @@ $(document).ready(function () {
 let worker = function (inputInteger) {
   var generatedIntegerArray = [];
   var manipulatedIntegerArray = [];
+  manipulatedIntegerArray.splice(0,manipulatedIntegerArray.length);
+  generatedIntegerArray.splice(0,generatedIntegerArray.length);
   const replacementString = ["Beep!", "Boop!", "Won't you be my neighbor?"];
   const keyNumbers = [1, 2, 3];
   let manipulatedIntegers = [];
@@ -28,8 +34,22 @@ let worker = function (inputInteger) {
   }
   generatedIntegerArray.forEach(function (generatedInteger) {
     if (generatedInteger.toString().match(rExpresssion)) {
-      console.log("generatedInteger matches RE " + generatedInteger);
+      // console.log("generatedInteger matches RE " + generatedInteger);
+      if (generatedInteger.toString().match(/3/g)) {
+        manipulatedIntegers.push(replacementString[2]);
+      }
+      else if (generatedInteger.toString().match(/2/g)) {
+        manipulatedIntegers.push(replacementString[1]);
+      }
+      // else if (generatedInteger.toString().match(/1/g)) {
+        else {
+        manipulatedIntegers.push(replacementString[0]);
+      }
+    }
+    else {
+      manipulatedIntegers.push(generatedInteger);
     }
   });
-  return generatedIntegerArray;
+// alert(manipulatedIntegers.join(", "));
+return manipulatedIntegers;
 }
