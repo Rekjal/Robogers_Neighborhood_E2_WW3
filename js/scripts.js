@@ -22,7 +22,8 @@
 $(document).ready(function () {  
   $("#entry").submit(function (e) {
     let numeral = parseInt($("input#numeral").val());
-    alert(numeral);
+    $('input[type="number"], textarea').val('');  // to clear form of entered value after submit
+    // alert(numeral);
     $("#story").show();
     e.preventDefault();
   });

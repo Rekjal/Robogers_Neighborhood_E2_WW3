@@ -14,6 +14,7 @@
 <body>
   <div class="container">
     <div>
+      <h1>Mr. Roboger's Neighborhood</h1>
       <form id = "entry" class="form-group block centerWide">
         <label for="numeral"></label>
         <input id="numeral" type="number" min=0 required step="1">
@@ -22,6 +23,22 @@
           <button class="btn btn-success" type="submit">Start!</button>
         </div>
       </form>
+    </div>
+
+    <div id="story" class="alert alert-dark" role="alert">
+      <p>You selected a numeral value of <span class="fullName color"></span>&nbsp; and based on your selection, the numerals are ... </p>
+      <div class="row">
+        <div class="col-6">
+          <ul id="question"></ul>
+        </div>
+        <div class="col-4">
+          <ul id="answer"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="aTag">
+      <a href="./index.html" id="aTag">Go Refresh Page</a>
     </div>
 
   </div>
