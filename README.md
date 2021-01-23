@@ -13,13 +13,13 @@ Web application that takes a number from user and returns a range of numbers fro
 -   Numbers that contain a 2: all digits are replaced with  _"Boop!"_
 -   Numbers that contain a 3: all digits are replaced with  _"Won't you be my neighbor?"_
 
-These exceptions are written from least to most important. The first exception should apply unless the second exception does, and the same with the second and third. So, for example, in your finished program,
+These exceptions are handled from least to most important. The first exception will apply unless the second exception does, and the same with the second and third. See below examples ...
 
--   The number 13 should be replaced with  _"Won't you be my neighbor?"_
--   The number 21 should be replaced with  _"Boop"_.
--   The number 32 should be replaced with  _"Won't you be my neighbor?"_
+-   The number 13 will be replaced with  _"Won't you be my neighbor?"_
+-   The number 21 will be replaced with  _"Boop"_.
+-   The number 32 will be replaced with  _"Won't you be my neighbor?"_
 
-A user should be able to enter a new number and see new results over and over again.
+Application allows user to enter a new number and see new results over and over again.
 
 ## Setup/Installation Requirements
 1. Clone this repository.
