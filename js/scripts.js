@@ -1,5 +1,5 @@
 // This is the business (or back-end) logic:
-let worker = function (inputInteger, orderCB, subName) {
+let beepBoop = function (inputInteger, orderCB, subName) {
   let generatedIntegers = [];
   let manipulatedIntegers = [];
   generatedIntegers.splice(0, generatedIntegers.length);
@@ -52,7 +52,7 @@ $(document).ready(function () {
     });
     let finalIntegerArray = [];
     finalIntegerArray.splice(0, finalIntegerArray.length);
-    finalIntegerArray = worker(inputNum, cBClicked, subName);
+    finalIntegerArray = beepBoop(inputNum, cBClicked, subName);
     $("#story").show();
     $(".inputNumber").text(inputNum.toString());
     let k = -1;
