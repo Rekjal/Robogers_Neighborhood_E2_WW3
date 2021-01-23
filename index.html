@@ -18,7 +18,7 @@
       <form id="entry" class="form-group block centerWide">
         <div>
           <label for="numeral"></label>
-          <input id="numeral" type="number" value="0" min=0 required step="1">
+          <input id="numeral" type="number" min=0 required step="1" placeholder="Enter Number">
         </div>
         <div>
           <input id="cb" type="checkbox" class="cbPadding" name="order" value="yes"> Return output in <strong
@@ -27,7 +27,8 @@
         <div>
           <br>
           <label for="subName"></label>
-          <input id="subName" type="text" value="Enter Optional Name">
+          <input id="subName" type="text" placeholder="Enter Optional Name">
+          <!-- value="Enter Optional Name" -->
         </div>
         <div class="center">
           <button class="btn btn-success" type="submit">Start!</button>
@@ -36,9 +37,14 @@
     </div>
 
     <div id="story" class="alert alert-dark" role="alert">
-      <p>Based on your selected numeral value of <span class="inputNumber color"></span>&nbsp; your output is ...</p>
-      <div class="col-8">
-        <ul id="answer"></ul>
+      <p>Based on your entered numeral value of <span class="inputNumber color"></span>&nbsp; your output is ...</p>
+      <div class="row">
+        <div class="col-4">
+          <ul id="question"></ul>
+        </div>
+        <div class="col-8 color">
+          <ul id="answer"></ul>
+        </div>
       </div>
     </div>
 
