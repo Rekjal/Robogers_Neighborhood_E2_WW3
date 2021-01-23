@@ -70,6 +70,11 @@ h2 {
 #story {
   display: none;
 }
+
+/* .storyClass {
+  display: none;
+} */
+
 a {
   cursor: pointer;
   color: #0088cc;

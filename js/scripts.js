@@ -30,12 +30,13 @@ let worker = function (inputInteger, orderCB) {
   
   if (orderCB)  {
     alert("Inside orderCB yes loop");
-    alert("manipulated array is " + manipulatedIntegers.reverse());
-    manipulatedIntegers = manipulatedIntegers.reverse();
-    return manipulatedIntegers
+    // alert("manipulated array is " + manipulatedIntegers.reverse());
+    // let manipulatedIntegers2 = [];
+    const manipulatedIntegers2 = manipulatedIntegers.reverse().slice()  
+    return manipulatedIntegers2;
   }
   else  {
-    alert("inside orderCB no loop");
+    // alert("inside orderCB no loop");
     return manipulatedIntegers;
   }
 }
@@ -44,29 +45,41 @@ let worker = function (inputInteger, orderCB) {
 // Everything below this line is the user interface (or front-end) logic:
 $(document).ready(function () {
   $("#entry").submit(function (e) {
-    var newOrder = false;
+    $("#story").hide();
+    // $("#story").addClass("storyClass");
+    var cBClicked = false;
     let inputNum = parseInt($("input#numeral").val());
     $('input[type="number"], textarea').val('');  // to clear form of entered value after submit
     $("input:checkbox[name=order]:checked").each(function() {
-      let Order = $(this).val();
-      newOrder = true;
-      // alert("order is " + Order);
-      // $('#work-responses').append(workTransportationMode + "<br>");
+     $('input[type="text"], textarea').val('');  // to clear form of entered value after submit  
+     cBClicked = true;;
     });
     
     let finalIntegerArray = [];
     finalIntegerArray.splice(0,finalIntegerArray.length);
-    alert("size of finalIntegerArray " + finalIntegerArray.length);    
-    finalIntegerArray = worker(inputNum, newOrder);
-    alert("finalIntegerArray array is " + finalIntegerArray);
-    $("#story").hide();
+    // alert("size of finalIntegerArray " + finalIntegerArray.length);    
+    finalIntegerArray = worker(inputNum, cBClicked);
+    // alert("finalIntegerArray array is " + finalIntegerArray);
+    
+    // $("#story").empty().show();
     $("#story").show();
     $(".inputNumber").text(inputNum.toString());
-    var k = -1;
+    let k = -1;
+    let step = 0; 
+    if(cBClicked === false) {
+      k = 0;
+      step = 1;
+    }
+    else {
+      k = inputNum;
+      step= -1;
+    }
+    $("ul#answer").empty();
     finalIntegerArray.forEach(function (element) {
-      k++;
-      let num = "<li>For input " + k + " <strong>" + element + "</strong></li>";
+      
+      let num = "<li>Numeral " + k + " <strong>" + element + "</strong></li>";
       $("ul#answer").append(num);
+      k = k +step;
     });
     e.preventDefault();
   });
