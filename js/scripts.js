@@ -4,7 +4,7 @@ let beepBoop = function (inputInteger, orderCB, subName) {
   let manipulatedIntegers = [];
   generatedIntegers.splice(0, generatedIntegers.length);
   manipulatedIntegers.splice(0, manipulatedIntegers.length);
-  const thirdMessage = (subName === "") ? "Won't you be my neighbor?" : "Won't you be my neighbor, " +subName +"?";
+  const thirdMessage = (subName === "") ? "Won't you be my neighbor?" : "Won't you be my neighbor, " + subName + "?";
   const replacementString = ["Beep!", "Boop!", thirdMessage];
   const keyNumbers = [1, 2, 3];
   const rExpresssion = /[1-3]/g;  //catch digit '1' or '2' or '3' or various permutation of three
@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('input[type="text"], textarea').val('');  // to clear form of entered value after submit
     $("input:checkbox[name=order]:checked").each(function () {
       cBClicked = true;
-      $("#cb").prop('checked', false); // to clear form of entered value after submit  
+      $("#cb").prop('checked', false); // to clear form of entered value after submit
     });
     let finalIntegerArray = [];
     finalIntegerArray.splice(0, finalIntegerArray.length);
@@ -69,7 +69,7 @@ $(document).ready(function () {
     $("ul#question").empty();
     finalIntegerArray.forEach(function (element) {
       let textQuestion = "<li>Numeral " + k + "</li>";
-      let textAnswer = "<li><strong>" + element + "</strong></li>";
+      let textAnswer = "<li>" + element + "</li>";
       $("ul#question").append(textQuestion);
       $("ul#answer").append(textAnswer);
       k = k + step;

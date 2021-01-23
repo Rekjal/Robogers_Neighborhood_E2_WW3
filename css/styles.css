@@ -27,10 +27,6 @@ h1 {
   background-color:#f52409;
 }
 
-.paraClass {
-  margin: 20px;
-}
-
 .block {
   margin: 40px;
 }
@@ -40,33 +36,10 @@ h1 {
   margin:auto;
 }
 
-.center2 {
-  width: 20%;
-  margin:auto;
-}
-
 .centerWide{
   width: 70%;
   padding: 25px;
   margin:auto;
-}
-
-.hidden {
-  display:none;
-}
-
-.result{
-  display: none;
-  width: 70%;
-  margin: auto;
-}
-
-.wide250 {
-  width: 250px;
-}
-
-.inLine {
-  display: inline;
 }
 
 #story {
@@ -102,23 +75,6 @@ a:hover {
   list-style-type: none;  
 }
 
-h3{
-  margin-top: 30px;
-  padding-left:40px;
-}
-
-.chosenTrack{
-  font-weight: 700;
-}
-
-.fullName {
-  text-transform: uppercase;
-}
-
-.hideButton {
-  display: none;
-}
-
 .color {
   font-weight: 700;
   color:white;
@@ -128,7 +84,6 @@ h3{
   margin-top:10px;
   margin-left:5px;
 }
-
 
 li:nth-child(odd) {
   background-color: #b66c61;
