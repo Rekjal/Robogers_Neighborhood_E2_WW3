@@ -6,7 +6,7 @@ let beepBoop = function (inputInteger, orderCB, subName) {
   manipulatedIntegers.splice(0, manipulatedIntegers.length);
   const thirdMessage = (subName === "") ? "Won't you be my neighbor?" : "Won't you be my neighbor, " + subName + "?";
   const replacementString = ["Beep!", "Boop!", thirdMessage];
-  const keyNumbers = [1, 2, 3];
+  // const keyNumbers = [1, 2, 3];
   const rExpresssion = /[1-3]/g;  //catch digit '1' or '2' or '3' or various permutation of three
   for (let i = 0; i <= inputInteger; i++) {
     generatedIntegers.push(i);
