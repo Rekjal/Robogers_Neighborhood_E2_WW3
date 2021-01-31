@@ -26,61 +26,41 @@ Application allows user to enter a new number and see new results over and over 
 
 | **Spec** |
 ```
-
 Describe: beepBop()
-
 Test: "It should return an array of numbers from 0 to user inputted number while substituting 1 for "Beep!""
-
 Expect(beepBoop(1)).toEqual(["0","Beep!"]);
 
 Describe: beepBop()
-
-Test:"It should return an array of numbers from 0 to user inputted number while substituting 1 for "Beep!", and 2 for "Boop!""
-
+Test:"It should return an array of numbers from 0 to user inputted number while substituting 1 for "Beep!", and 2 for "Boop!"" 
 Expect(beepBoop(2)).toEqual(["0","Beep!","Boop!"])
 
 Describe: beepBop()
-
 Test:"It should return an array of numbers from 0 to user inputted number while substituting 1 for "Beep!", 2 for "Boop!", and 3 for "Won't you be my neighbor?""
-
 Expect(beepBop(3)).toEqual(["0","Beep!","Boop!","Won't you be my neighbor?"])
 
 Describe: beepBop()
-
-Test:"It should return an array of numbers from 0 to user inputted number while substituting "Boop!" for any number that has 1 as a digit"
-
+Test:"It should return an array of numbers from 0 to user inputted number while substituting "Beep!" for any number that has 1 as a digit"
 Expect(beepBop(10)).toEqual(["0","Beep!","Boop!","Won't you be my neighbor?", "4","5","6","7","8","9","Beep!"])
 
 Describe: beepBop()
-
 Test:"It should return an array of numbers from 0 to user inputted number while substituting "Boop!" for any number that has 2 as a digit, overriding 1s"
-
 Expect(beepBop(12)).toEqual(["0","Beep!","Boop!","Won't you be my neighbor?", "4","5","6","7","8","9","Beep!","Beep!","Boop!"])
 
 Describe: beepBop()
-
 Test:"It should return an array of numbers from 0 to user inputted number while substituting "Won't you be my neighbor?" for any number that has 3 as a digit, overriding 1s and 2s"
-
 Expect(beepBop(32)).toEqual(["0","Beep!","Boop!","Won't you be my neighbor?","4","5","6","7","8","9","Beep!","Beep!","Boop!","Won't you be my neighbor?","Beep!","Beep!","Beep!","Beep!","Beep!","Beep!","Boop!","Boop!","Boop!","Won't you be my neighbor?","Boop!","Boop!","Boop!","Boop!","Boop!","Boop!","Won't you be my neighbor?","Won't you be my neighbor?","Won't you be my neighbor?"])
 
 Describe: beepBop()
-
 Test:"It should return an array of numbers in **reverse** order if checkbox **Return output **Reverse** order** is clicked"
-
 Expect(beepBop(32)).toEqual(["Won't you be my neighbor?","Won't you be my neighbor?","Won't you be my neighbor?","Boop!","Boop!","Boop!","Boop!","Boop!","Boop!","Won't you be my neighbor?","Boop!","Boop!","Boop!","Beep!","Beep!","Beep!","Beep!","Beep!","Beep!","Won't you be my neighbor?","Boop!","Beep!","Beep!","9","8","7","6","5","4","Won't you be my neighbor?","Boop!","Beep!","0"])
 
 Describe: beepBop()
-
 Test:"It should update string for 3s from **"Won't you be my neighbor?"** to **"Won't you be my neighbor, Travis?"** if string **_Travis_** is entered into **Optional Name** field"
-
 Expect(beepBop(32)).toEqual(["Won't you be my neighbor, Travis?","Won't you be my neighbor, Travis?","Won't you be my neighbor, Travis?","Boop!","Boop!","Boop!","Boop!","Boop!","Boop!","Won't you be my neighbor, Travis?","Boop!","Boop!","Boop!","Beep!","Beep!","Beep!","Beep!","Beep!","Beep!","Won't you be my neighbor, Travis?","Boop!","Beep!","Beep!","9","8","7","6","5","4","Won't you be my neighbor, Travis?","Boop!","Beep!","0"])
 
 Describe: beepBop()
-
 Test:"It should update string for 3s from **"Won't you be my neighbor?"** to **"Won't you be my neighbor, Travis?"** if string **_Travis_** is entered into **Optional Name** field. Also it should return an array of numbers in **reverse** order if checkbox **Return output **Reverse** order** is clicked"
-
 Expect(beepBop(32)).toEqual(["Won't you be my neighbor, Travis?", "Won't you be my neighbor, Travis?", "Won't you be my neighbor, Travis?", "Boop!", "Boop!", "Boop!", "Boop!", "Boop!", "Boop!", "Won't you be my neighbor, Travis?", "Boop!", "Boop!", "Boop!", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Beep!", "Won't you be my neighbor, Travis?", "Boop!", "Beep!", "Beep!", "9", "8", "7", "6", "5", "4", "Won't you be my neighbor, Travis?", "Boop!", "Beep!", "0"])
-
 ```
 
 ## Link to this site on GitHub Pages
